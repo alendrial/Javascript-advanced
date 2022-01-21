@@ -26,7 +26,7 @@ module.exports = {
       new HtmlWebpackPlugin({
           title: 'GeekBrains Shop JS2 by MashkinM',
           shoptitle: '<h1>MashkinMV</h1>',
-          shopcontent: `<div class="showcase container"></div>`,
+          shopcontent: `<div class="showcase"></div>`,
           template: path.resolve(__dirname, './public/template.html'), // шаблон
           filename: 'index.html', // название выходного файла
       }),
