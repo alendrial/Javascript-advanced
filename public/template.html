@@ -8,16 +8,20 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-  <header>
+<div class="wrapper">
+  <div class="page">
+    <header>
     <%= htmlWebpackPlugin.options.shoptitle %>
 
   
-  </header>
-  <main>
+    </header>
+    <main>
     <%= htmlWebpackPlugin.options.shopcontent %>
-  </main>
+    </main>
+  </div>
   <footer>
     <p>2021 &copy;</p>
   </footer>
+</div>
 </body>
 </html>

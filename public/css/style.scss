@@ -12,3 +12,12 @@
     margin: 0 auto;
 }
 
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.page {
+    flex-grow: 1    
+}
