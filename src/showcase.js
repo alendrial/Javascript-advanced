@@ -15,3 +15,4 @@ const renderGoodsList = (list) => {
 }
 
 export default renderGoodsList
+

@@ -7,3 +7,4 @@ const productList = getProductList(20);
 
 renderGoodsList(productList);
 
+

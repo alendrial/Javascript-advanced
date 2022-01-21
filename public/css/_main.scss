@@ -1,5 +1,14 @@
 .showcase {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+.goods-item {
+    border: solid 1px black;
+    h3 {
+        color: white;
+    }
 }
