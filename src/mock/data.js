@@ -30,7 +30,8 @@ function getProduct() {
   return {
     id: ++lastIndex,
     title: getProductName(),
-    price: random(99, 999)
+    price: random(99, 999),
+    img: `https://placeimg.com/100/150/arch?t=${random(0,999)}`
   }
 }
 
