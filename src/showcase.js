@@ -1,6 +1,6 @@
 const $showcase = document.querySelector('.showcase');
 
-const renderGoodsItem = ({ title, price }) => {
+const renderGoodsItem = ({ title, price, img }) => {
   return `<div class="goods-item">
           <img src="${img}" alt="picture">
           <h3>${title}</h3>
