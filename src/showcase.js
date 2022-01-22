@@ -5,6 +5,7 @@ const renderGoodsItem = ({ title, price, img }) => {
           <img src="${img}" alt="picture">
           <h3>${title}</h3>
           <p>${price}</p>
+          <button>Add to basket</button>
           </div>`
 };
 
