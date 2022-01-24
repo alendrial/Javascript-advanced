@@ -1,3 +1,4 @@
+import { random } from 'lodash'
 const path = require('path')
 const fs = require('fs')
 const express = require('express')
@@ -40,6 +41,8 @@ app.get('/api/v1/catalog/:id', (req, res) => {
   })
 })
 
+
+
 app.get('/api/v1/cart', (req, res) => {
   fs.readFile(cart_path, 'utf-8', (err, data) => {
     if(!err) {
@@ -50,6 +53,20 @@ app.get('/api/v1/cart', (req, res) => {
   })
 })
 
+/*
+app.get('/api/getProduct', (req, res) => {
+  fs.readFile(PRODUCT_URL, 'utf8', (err, data) => {
+      if(err){
+          res.send({
+              result: 0,
+              err,
+          })
+      } else {
+          res.send(data);
+      }
+  })
+});
+*/
 
 app.post('/api/v1/cart', (req, res) => {
   fs.readFile(cart_path, 'utf-8', (err, data) => {
@@ -64,6 +81,7 @@ app.post('/api/v1/cart', (req, res) => {
     }
   })
 })
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
