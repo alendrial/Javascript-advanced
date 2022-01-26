@@ -53,7 +53,7 @@ app.get('/api/v1/cart', (req, res) => {
 })
 
 
-/*
+
 app.post('/api/v1/cart', (req, res) => {
   fs.readFile(cart_path, 'utf-8', (err, data) => {
     if(!err) {
@@ -67,17 +67,19 @@ app.post('/api/v1/cart', (req, res) => {
     }
   })
 })
-*/
+
+
+
 app.delete('/api/v1/cart', (req, res) => {
   fs.readFile(cart_path, 'utf-8', (err, data) => {
     if(!err) {
       const cart = JSON.parse(data);
-      const n = cart.findIndex((item) => item.id == req.body.id)
-      if (n < 0) {
-        res.status(404).send('not found  n');
+      const ni = cart.findIndex((item) => item.id == req.body.id)
+      if (i < 0) {
+        res.status(404).send('not found  i');
         return;
       }
-      cart.splice(n, 1);
+      cart.splice(i, 1);
       fs.writeFile(cart_path, JSON.stringify(cart), 'utf-8', (err, data) => {
         res.sendStatus(201)
       })
