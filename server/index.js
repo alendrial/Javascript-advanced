@@ -54,6 +54,7 @@ app.get('/api/v1/cart', (req, res) => {
 
 
 
+/*
 app.post('/api/v1/cart', (req, res) => {
   fs.readFile(cart_path, 'utf-8', (err, data) => {
     if(!err) {
@@ -67,7 +68,7 @@ app.post('/api/v1/cart', (req, res) => {
     }
   })
 })
-
+*/
 
 
 app.delete('/api/v1/cart', (req, res) => {
@@ -76,7 +77,7 @@ app.delete('/api/v1/cart', (req, res) => {
       const cart = JSON.parse(data);
       const i = cart.findIndex((item) => item.id == req.body.id)
       if (i < 0) {
-        res.status(404).send('not found  i');
+        res.status(404).send('not found');
         return;
       }
       cart.splice(i, 1);
