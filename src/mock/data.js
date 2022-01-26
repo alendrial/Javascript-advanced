@@ -29,7 +29,7 @@ function getProductName() {
 function getProduct() {
   return {
     id: ++lastIndex,
-    img: `${img}`,
+    //img: `${img}`,
     title: getProductName(),
     price: random(99, 999)
   }

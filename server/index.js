@@ -74,8 +74,8 @@ app.delete('/api/v1/cart', (req, res) => {
       const cart = JSON.parse(data);
       const n = cart.findIndex((item) => item.id == req.body.id)
       if (n < 0) {
-        res.status(404).send('not foun  d')
-        return
+        res.status(404).send('not found  n');
+        return;
       }
       cart.splice(n, 1);
       fs.writeFile(cart_path, JSON.stringify(cart), 'utf-8', (err, data) => {
