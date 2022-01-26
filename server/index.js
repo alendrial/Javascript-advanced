@@ -74,7 +74,7 @@ app.delete('/api/v1/cart', (req, res) => {
   fs.readFile(cart_path, 'utf-8', (err, data) => {
     if(!err) {
       const cart = JSON.parse(data);
-      const ni = cart.findIndex((item) => item.id == req.body.id)
+      const i = cart.findIndex((item) => item.id == req.body.id)
       if (i < 0) {
         res.status(404).send('not found  i');
         return;

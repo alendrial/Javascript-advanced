@@ -21,6 +21,8 @@ send((error) => { console.log(err) }, (res) => {
 }, `${API_URL}/catalog`);
 
 let buyed = {id: 5, title: "new", price: 999};
+
 send((error) => { console.log(err) }, (res) => {
   cart.push(buyed)
-}, `${API_URL}/cart`, 'POST', JSON.stringify(buyed), {"Content-Type": "application/json"})
+}, `${API_URL}/cart`, 'POST', JSON.stringify(buyed), {"Content-Type": "application/json"});
+
