@@ -53,7 +53,7 @@ app.get('/api/v1/cart', (req, res) => {
 })
 
 
-
+/*
 app.post('/api/v1/cart', (req, res) => {
   fs.readFile(cart_path, 'utf-8', (err, data) => {
     if(!err) {
@@ -67,7 +67,7 @@ app.post('/api/v1/cart', (req, res) => {
     }
   })
 })
-
+*/
 app.delete('/api/v1/cart', (req, res) => {
   fs.readFile(cart_path, 'utf-8', (err, data) => {
     if(!err) {
