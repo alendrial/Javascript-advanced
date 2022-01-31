@@ -17,7 +17,7 @@ const COLORS = [
 ]
 
 let lastIndex = 0;
-
+let img = 'https://placeimg.com/100/150/arch?t=${random(0,999)}';
 
 function getProductName() {
   const product = PRODUCTS[random(0, PRODUCTS.length - 1)]
@@ -29,6 +29,7 @@ function getProductName() {
 function getProduct() {
   return {
     id: ++lastIndex,
+    //img: `${img}`,
     title: getProductName(),
     price: random(99, 999)
   }

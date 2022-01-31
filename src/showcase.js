@@ -1,7 +1,12 @@
 const $showcase = document.querySelector('.showcase');
 
-const renderGoodsItem = ({ title, price }) => {
-  return `<div class="goods-item"><h3>${title}</h3><p>${price}</p></div>`;
+const renderGoodsItem = ({ title, price, img }) => {
+  return `<div class="goods-item">
+          <!--<img src="${img}" alt="picture">-->
+          <h3>${title}</h3>
+          <p>${price}</p>
+          <button>Add to basket</button>
+          </div>`
 };
 
 const renderGoodsList = (list) => {
@@ -15,3 +20,4 @@ const renderGoodsList = (list) => {
 }
 
 export default renderGoodsList
+

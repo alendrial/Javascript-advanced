@@ -1,6 +1,7 @@
 @import "../css/header";
 @import "../css/main";
 @import "../css/footer";
+@import "../css/card";
 
 * {
     margin: 0;
@@ -12,3 +13,12 @@
     margin: 0 auto;
 }
 
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.page {
+    flex-grow: 1    
+}

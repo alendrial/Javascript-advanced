@@ -1,0 +1,15 @@
+.goods-item {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+        
+    }
+    button {
+        border: solid 1px black;
+        padding: 10px;
+        margin: 10px 20px;
+        background-color:red;
+    }
+}

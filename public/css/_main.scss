@@ -1,5 +1,9 @@
 .showcase {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 30px;
+    background: rgb(203, 241, 241);
 }
+
