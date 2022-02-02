@@ -32,3 +32,4 @@ export function send(onError, onSuccess, url, method = 'GET', data = '', headers
 
     xhr.send(data);
 }
+
