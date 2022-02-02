@@ -19,8 +19,4 @@ export default class ApiHandler {
   removeFromCart(onSuccess, onError, data) {
     this.send(onError, onSuccess, `${this.apiUrl}/cart`, 'DELETE', JSON.stringify(data), {"Content-Type": "application/json"})
   }
-
-
-  
-
 }
