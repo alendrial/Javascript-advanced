@@ -23,7 +23,7 @@ export default class MockApi {
   }
 
   getCatalog(onSuccess, onError) {
-    onSuccess(JSON.strigify(this.getProductList(20))
+    onSuccess(JSON.stringify(this.getProductList(20)))
   }
 
   getCart(onSuccess) {

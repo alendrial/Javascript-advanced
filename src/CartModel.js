@@ -10,11 +10,11 @@ export default class CartModel extends ProductList {
   fetch() {
     return this.api.getCart()
     .then((list) => {
-      this.list = list
+      this.list = list  
       return list
     })
     .then((list) => {
-      this.eventEmmiter.emit('cartFeched')
+      this.eventEmmiter.emit('cartFeched', list)
       return list
     })
   }
