@@ -9,13 +9,18 @@ export default class ApiHandler {
     send(onError, onSuccess, `${this.apiUrl}/catalog`)
   }
 
+  
+  getCart(onSuccess, onError) {
+    send(onError, onSuccess, `${this.apiUrl}/catalog`)
+  }
+  /*
   getCart(onSuccess, onError) {
     return sendPromise(`${this.apiUrl}/cart`)
       .then((data) => {
         return JSON.stringify(data)
       })
   }
-
+  */
   addToCart(onSuccess, onError, data) {
     send(onError, onSuccess, `${this.apiUrl}/cart`, 'POST', JSON.stringify(data), {"Content-Type": "application/json"})
   }
