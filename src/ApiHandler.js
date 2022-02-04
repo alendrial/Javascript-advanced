@@ -23,10 +23,10 @@ export default class ApiHandler {
   }
   
 
-  // addToCart(onSuccess, onError, data) {
-  //  send(onError, onSuccess, `${this.apiUrl}/cart`, 'POST', JSON.stringify(data), {"Content-Type": "application/json"})
-  //}
-
+  addToCart(onSuccess, onError, data) {
+    send(onError, onSuccess, `${this.apiUrl}/cart`, 'POST', JSON.stringify(data), {"Content-Type": "application/json"})
+  }
+    /*
     addToCart(apiUrl, data) {
       return fetch(`${this.apiUrl}`, {
         method: 'PUT', 
@@ -36,10 +36,11 @@ export default class ApiHandler {
          body: JSON.stringify(data)
         }).then(result => result.json())
     }
-
-  //removeFromCart(onSuccess, onError, data) {
-  //  send(onError, onSuccess, `${this.apiUrl}/cart`, 'DELETE', JSON.stringify(data), {"Content-Type": "application/json"})
-  //}
+    */
+  removeFromCart(onSuccess, onError, data) {
+    send(onError, onSuccess, `${this.apiUrl}/cart`, 'DELETE', JSON.stringify(data), {"Content-Type": "application/json"})
+  }
+  /*
      removeFromCart(apiUrl) {
        return fetch(`${this.apiUrl}`,{
          method: 'DELETE',
@@ -48,6 +49,6 @@ export default class ApiHandler {
          },
        }).then(result => result.json())
      }
-
+     */
 
 }
