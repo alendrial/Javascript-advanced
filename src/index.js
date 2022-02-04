@@ -23,7 +23,15 @@ eventEmmiter.subscribe('cartFeched', (data) => {
 })
 
 showcase.fetch()
+
+
 cart.fetch()
+  .then((data) => {
+    console.log('данные получены')
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 
 
 
