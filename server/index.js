@@ -26,6 +26,7 @@ app.get('/api/v1/catalog/:id', (req, res) => {
   fs.readFile(catalog_path, 'utf-8', (err, data) => {
     if(!err) {
       const catalog = JSON.parse(data);
+      console.log(catalog);
       const product = catalog.find((item) => item.id == req.params.id)
 
       if(!product) {
