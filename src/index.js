@@ -3,6 +3,9 @@ import CartModel from './CartModel.js';
 import ShowcaseModel from './ShowcaseModel.js';
 import EventEmitter from './EventEmitter.js'
 
+import _ from "lodash";
+import '../public/css/style.scss';
+
 const API_URL = 'http://localhost:3000/api/v1'
 
 const api = new ApiHandler(API_URL)
