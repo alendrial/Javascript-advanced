@@ -24,7 +24,7 @@ export default class ProductList {
       this.list = [...this.list.slice(0, index), ...this.list.slice(index + 1)]
       return true;
     }
-
+    
     return false;
   }
 }
