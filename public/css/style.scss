@@ -2,6 +2,12 @@
 @import "../css/main";
 @import "../css/footer";
 @import "../css/card";
+@font-face {
+    font-family: "Jura";
+    src: url(./fonts/Jura-VariableFont_wght.ttf);
+    font-style: normal; 
+    font-weight: normal;
+}
 
 * {
     margin: 0;
@@ -21,4 +27,8 @@
 }
 .page {
     flex-grow: 1    
+}
+
+body {
+    font-family: "Jura"
 }
