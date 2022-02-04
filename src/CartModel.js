@@ -6,7 +6,7 @@ export default class CartModel extends ProductList {
     this.api = apiHandler
     this.eventEmmiter = eventEmmiter
   }
-
+  /*
   fetch() {
     return this.api.getCart()
     .then((list) => {
@@ -17,6 +17,16 @@ export default class CartModel extends ProductList {
       this.eventEmmiter.emit('cartFeched', list)
       return list
     })
+  }
+  */
+  fetch(onError) {
+    this.api.getCart(
+      (data) => { 
+        this.list = JSON.parse(data)
+        this.eventEmmiter.emit('cartFeched', this.list)
+      },
+      onError
+    )
   }
 
   add(product, onError) {
