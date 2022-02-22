@@ -18,10 +18,10 @@ export default class ProductCardView {
   }
 
   getHtml() {
-    return `<img src="" alt="Picture-Error"><h3>${this.data.title}</h3><p>${this.data.price}</p><button class="cardBtn">Add to Cart</button>`
+    return `<img src="" alt="Picture-Error"><h3>${this.data.title}</h3><p>${this.data.price}</p><button class="cardBtn" productId = "${this.data.id}">Add to Cart</button>`
   }
   getHtmlCart() {
-    return `<img src="" alt="Picture-Error"><h3>${this.data.title}</h3><p>${this.data.price}</p><button class="cardCartBtn">Remove from Cart</button>`
+    return `<img src="" alt="Picture-Error"><h3>${this.data.title}</h3><p>${this.data.price}</p><button class="cardCartBtn" productId="${this.data.id}">Remove from Cart</button>`
   }
 
   getElement() {

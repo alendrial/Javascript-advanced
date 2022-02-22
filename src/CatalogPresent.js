@@ -20,9 +20,11 @@ export default class CatalogPresenter {
 
             console.log(basketAddBtn)
 
-            basketAddBtn.forEach((button)=>{button.addEventListener('click', (event) => {
-                this.catalogmodel.addToCart(this.cards[event.target.id])
-                console.log(this.cards[event.target.dataset.id])
+            basketAddBtn.forEach((button)=>{button.addEventListener('click', (event) => {   
+                let productId = event.target.getAttribute('productId')
+                console.log(productId)
+                console.log(this.cards[productId].data.id)
+                this.catalogmodel.addToCart(this.cards[productId].data.id)
             })}
             )
 
@@ -37,7 +39,10 @@ export default class CatalogPresenter {
             let basketRemoveBtn = document.querySelectorAll('.cardCartBtn');
             console.log(basketRemoveBtn);
             basketRemoveBtn.forEach((button)=>{button.addEventListener('click', (event) => {
-                this.cartmodel.remove(this.basket[event.target.parentnode.id])
+                let productId = event.target.getAttribute('productId')
+                console.log(productId)
+                console.log(this.basket[productId].data.id)
+                this.cartmodel.remove(this.basket[productId].data.id)
             })}
             )
         })
