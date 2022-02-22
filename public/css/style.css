@@ -1,6 +1,99 @@
 h1 {
   text-transform: uppercase;
   color: paleturquoise;
+  text-align: center;
+  background: rgba(163, 91, 8, 0.651);
+  width: 100%;
+  max-height: 600px;
+  height: 100%;
+}
+
+.showcase__container {
+  width: 100%;
+  height: calc(100vh - 56px) !important;
+  background-color: grey;
+}
+
+.showcase {
+  max-width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 30px;
+  gap: 30px;
+  background: linear-gradient(45deg, #fbebdc, #f9d8d7);
+}
+
+footer {
+  background: rgba(163, 91, 8, 0.651);
+  text-align: center;
+  max-height: 10vh;
+  color: white;
+}
+
+.card {
+  border: solid 1px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 25px 22px rgba(34, 60, 80, 0.14);
+  box-shadow: 0px 0px 25px 22px rgba(34, 60, 80, 0.14);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #cccbd9), to(#7aa0ae));
+  background: linear-gradient(180deg, #cccbd9 30%, #7aa0ae);
+}
+
+.card h3 {
+  margin-top: 15px;
+}
+
+.card p {
+  margin-top: 15px;
+}
+
+.card p:before {
+  content: '$';
+}
+
+.card button {
+  border: solid 1px black;
+  padding: 10px;
+  margin: 10px 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 48px 43px rgba(178, 195, 29, 0.14) inset;
+  box-shadow: 0px 0px 48px 43px rgba(178, 195, 29, 0.14) inset;
+}
+
+.card button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+}
+
+@font-face {
+  font-family: "Jura";
+  src: url(./fonts/Jura-VariableFont_wght.ttf);
+  font-style: normal;
+  font-weight: normal;
 }
 
 * {
@@ -11,5 +104,27 @@ h1 {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+body {
+  font-family: "Jura";
 }
 /*# sourceMappingURL=style.css.map */

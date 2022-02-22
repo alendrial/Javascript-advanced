@@ -1,6 +1,13 @@
 @import "../css/header";
 @import "../css/main";
 @import "../css/footer";
+@import "../css/card";
+@font-face {
+    font-family: "Jura";
+    src: url(./fonts/Jura-VariableFont_wght.ttf);
+    font-style: normal; 
+    font-weight: normal;
+}
 
 * {
     margin: 0;
@@ -12,3 +19,16 @@
     margin: 0 auto;
 }
 
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.page {
+    flex-grow: 1    
+}
+
+body {
+    font-family: "Jura"
+}
