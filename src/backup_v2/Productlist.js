@@ -21,13 +21,13 @@ export default class ProductList extends EventEmitter {
 
     add(item) {
         this.list.push(item);
-        this.emit('add', item);
+        this.emit('Add', item);
     }
 
     remove(id) {
         const idx = this.list.findIndex(item => item.id === id);
         this.list.splice(idx, 1);
-        this.emit('remove', id);
+        this.emit('Remove', id);
     }
 
 }

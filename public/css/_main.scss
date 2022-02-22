@@ -1,9 +1,23 @@
+.showcase__container {
+
+    width: 100%;
+    height: calc(100vh - 56px) !important;
+    background-color: grey;
+
+}
 .showcase {
+
+    max-width: 1140px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 30px;
     gap: 30px;
-    background: rgb(203, 241, 241);
+    background: -webkit-linear-gradient(45deg, rgb(251, 235, 220), rgb(249, 216, 215));
+    background: -moz-linear-gradient(45deg, rgb(251, 235, 220), rgb(249, 216, 215));
+    background: linear-gradient(45deg, rgb(251, 235, 220), rgb(249, 216, 215));
 }
+
 

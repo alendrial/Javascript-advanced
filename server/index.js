@@ -21,7 +21,7 @@ app.get('/api/v1/catalog', (req, res) => {
     }
   })
 })
-
+/*
 app.get('/api/v1/catalog/:id', (req, res) => {
   fs.readFile(catalog_path, 'utf-8', (err, data) => {
     if(!err) {
@@ -40,7 +40,7 @@ app.get('/api/v1/catalog/:id', (req, res) => {
     }
   })
 })
-
+*/
 
 
 app.get('/api/v1/cart', (req, res) => {
@@ -71,7 +71,21 @@ app.post('/api/v1/cart', (req, res) => {
 })
 
 
-
+app.delete('/api/v1/cart:id', (req, res) => {
+  fs.readFile(cart_path, 'utf-8', (err, data) => { 
+      if (!err) {
+      const cart = JSON.parse(data);
+      const idx = cart.findIndex((item) => item.id = req.params.id)
+      cart.splice(idx, 1)
+      fs.writeFile(cart_path, JSON.stringify(cart), 'utf-8', (err, data) => {
+        res.sendStatus(201)
+      })
+    } else {
+      res.status(500).send(err)
+    }
+  })
+})  
+/*
 app.delete('/api/v1/cart', (req, res) => {
   fs.readFile(cart_path, 'utf-8', (err, data) => {
     if(!err) {
@@ -90,7 +104,7 @@ app.delete('/api/v1/cart', (req, res) => {
     }
   })
 })
-
+*/
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
