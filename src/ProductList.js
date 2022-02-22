@@ -26,6 +26,7 @@ export default class ProductList extends EventEmitter {
 
     remove(id) {
         const idx = this.list.findIndex(item => item.id === id);
+        console.log(idx);
         this.list.splice(idx, 1);
         this.emit('remove', id);
     }

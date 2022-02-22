@@ -23,7 +23,7 @@ export default class CatalogPresenter {
             basketAddBtn.forEach((button)=>{button.addEventListener('click', (event) => {   
                 let productId = event.target.getAttribute('productId')
                 console.log(productId)
-                console.log(this.cards[productId].data.id)
+                console.log(this.cards[productId - 1].data.id)
                 this.catalogmodel.addToCart(this.cards[productId].data.id)
             })}
             )
